@@ -82,7 +82,7 @@ module Tai64
     private :str=, :str
 
     def initialize(str)
-      self.str = str.gsub /^@/, ''
+      self.str = str.gsub(/^@/, '')
     end
 
     def to_s

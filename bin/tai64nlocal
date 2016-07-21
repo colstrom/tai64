@@ -4,7 +4,7 @@ require 'tai64'
 require 'time'
 
 $stdin.each_line do |l|
-  parts = l.split /\s+/, 2
+  parts = l.split(/\s+/, 2)
   begin
     label = Tai64.parse parts[0]
     time = label.to_time
