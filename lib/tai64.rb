@@ -66,7 +66,7 @@ module Tai64
       else
         EPOCH - sec
       end
-      Label.new s % [ ts, tai_nanosecond ]
+      Label.new s % [ts, tai_nanosecond]
     end
 
     def iso8601
@@ -129,7 +129,7 @@ module Tai64
     end
 
     def tai_parts
-      [ tai_second, tai_nanosecond, tai_attosecond ].compact
+      [tai_second, tai_nanosecond, tai_attosecond].compact
     end
 
     def format_string

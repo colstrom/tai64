@@ -9,7 +9,7 @@ $stdin.each_line do |l|
     label = Tai64.parse parts[0]
     time = label.to_time
     ts = time.iso8601 10
-    puts [ ts, parts[1] ].join ' '
+    puts [ts, parts[1]].join ' '
   rescue
     puts parts.join ' '
   end
