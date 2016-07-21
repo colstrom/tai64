@@ -13,11 +13,8 @@ module Tai64
   module Fudge
     def self.included(into)
       into.class_eval do
-        attr_accessor :leap_second_fudge
-        private :leap_second_fudge=, :leap_second_fudge
-
-        attr_accessor :nano_second_fudge
-        private :nano_second_fudge=
+        attr_accessor :leap_second_fudge, :nano_second_fudge
+        private :leap_second_fudge=, :leap_second_fudge, :nano_second_fudge=
 
         def leap_second_fudge
           @leap_second_fudge ||= 10
