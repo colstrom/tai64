@@ -2,8 +2,8 @@ require 'time'
 require 'tai64/version'
 
 module Tai64
-  EPOCH = 2 ** 62
-  MAXIMUM = 2 ** 63
+  EPOCH = 2**62
+  MAXIMUM = 2**63
 
   def self.parse(str)
     Label.new str
@@ -143,15 +143,15 @@ module Tai64
 
     def utc_reference
       utc_time = utc_second
-      utc_time += utc_nanosecond / (10 ** 9) unless utc_nanosecond.nil?
-      utc_time += utc_attosecond / (10 ** 18) unless utc_attosecond.nil?
+      utc_time += utc_nanosecond / (10**9) unless utc_nanosecond.nil?
+      utc_time += utc_attosecond / (10**18) unless utc_attosecond.nil?
       utc_time
     end
 
     def tai_reference
       tai_time = tai_second
-      tai_time += tai_nanosecond / (10 ** 9) unless tai_nanosecond.nil?
-      tai_time += tai_attosecond / (10 ** 18) unless tai_attosecond.nil?
+      tai_time += tai_nanosecond / (10**9) unless tai_nanosecond.nil?
+      tai_time += tai_attosecond / (10**18) unless tai_attosecond.nil?
       tai_time
     end
 
