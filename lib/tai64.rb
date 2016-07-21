@@ -91,13 +91,8 @@ module Tai64
 
     def tai_second
       s = str.scan(/^\@?([0-9abcdef]{16})/i)[0][0].to_i(16)
-      if s.between? 0, EPOCH - 1
-        return EPOCH - s
-      elsif s.between? EPOCH, MAXIMUM
-        return s - EPOCH
-      else
-        raise "I don't know how to deal with s=#{s}"
-      end
+      raise "I don't know how to deal with s=#{s}" unless s.between? 0, MAXIMUM
+      s < EPOCH ? EPOCH - s : s - EPOCH
     end
 
     def utc_second
