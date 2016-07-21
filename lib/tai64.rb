@@ -72,7 +72,7 @@ module Tai64
     def iso8601
       time.iso8601
     end
-    alias_method :to_s, :iso8601
+    alias to_s iso8601
   end
 
   class Label
