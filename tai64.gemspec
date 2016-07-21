@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.summary       = 'Work with TAI64 timestamps'
   gem.homepage      = 'http://cr.yp.to/libtai/tai64.html'
 
-  gem.files         = `git ls-files`.split($\)
+  gem.files         = `git ls-files`.split($OUTPUT_RECORD_SEPARATOR)
   gem.executables   = gem.files.grep(%r{^bin/}).map { |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = 'tai64'
