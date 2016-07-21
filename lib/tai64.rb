@@ -138,7 +138,7 @@ module Tai64
       fmt << "%08x"
       return fmt if tai_attosecond.nil?
       fmt << "%08x"
-      return fmt
+      fmt
     end
 
     def utc_reference
