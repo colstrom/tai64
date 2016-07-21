@@ -1,5 +1,5 @@
-require "time"
-require "tai64/version"
+require 'time'
+require 'tai64/version'
 
 module Tai64
   EPOCH = 2 ** 62
@@ -133,11 +133,11 @@ module Tai64
     end
 
     def format_string
-      fmt = "%016x"
+      fmt = '%016x'
       return fmt if tai_nanosecond.nil?
-      fmt << "%08x"
+      fmt << '%08x'
       return fmt if tai_attosecond.nil?
-      fmt << "%08x"
+      fmt << '%08x'
       fmt
     end
 
