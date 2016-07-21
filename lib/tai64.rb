@@ -1,6 +1,7 @@
 require 'time'
 require 'tai64/version'
 
+# Module for Tai64 Timestamps
 module Tai64
   EPOCH = 2**62
   MAXIMUM = 2**63
@@ -29,6 +30,7 @@ module Tai64
     end
   end
 
+  # Tai64-supporting Time class
   class Time
     include Fudge
 
@@ -75,6 +77,7 @@ module Tai64
     alias to_s iso8601
   end
 
+  # Tai64 Label
   class Label
     include Fudge
 
