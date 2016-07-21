@@ -5,12 +5,12 @@ module Tai64
   EPOCH = 2 ** 62
   MAXIMUM = 2 ** 63
 
-  def self.parse str
+  def self.parse(str)
     Label.new str
   end
 
   module Fudge
-    def self.included into
+    def self.included(into)
       into.class_eval do
 	attr_accessor :leap_second_fudge
 	private :leap_second_fudge=, :leap_second_fudge
@@ -35,7 +35,7 @@ module Tai64
     attr_accessor :time
     private :time=, :time
 
-    def initialize time
+    def initialize(time)
       self.time = time
     end
 
@@ -81,7 +81,7 @@ module Tai64
     attr_accessor :str
     private :str=, :str
 
-    def initialize str
+    def initialize(str)
       self.str = str.gsub /^@/, ''
     end
 
