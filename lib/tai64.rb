@@ -72,6 +72,7 @@ module Tai64
       time.iso8601
     end
     alias to_s iso8601
+    alias to_str to_s
   end
 
   # Tai64 Label
